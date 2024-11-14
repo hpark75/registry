@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "ef50e285-37f6-4f6c-95a9-d72402566fe6",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3263647"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "juan",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "hellohello",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"juan\",\n    \"email\": \"juan@rodriguez.org\",\n    \"password\": \"hellohello\",\n    \"phones\": [\n        {\n            \"number\": \"44444444\",\n            \"citycode\": \"11\",\n            \"countrycode\": \"54\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoianVhbiIsImV4cCI6MTczMTU3NTY4OCwiaWF0IjoxNzMxNTcyMDg4LCJzY29wZSI6IlJPTEVfVVNFUiJ9.Vagu6G1QbDa_PkC2WqVbhpl-hquCRNhqWKFxwKcUcSaH_bzuUCHWbCrZ09owQl7V-L8wvZYPzX-uMLn1yaUZgbIQIoewwGyMOXw6hEBW4MGW10IP9w8LRZADnnkehaxsDDkY00xhmLwlbdFn-m3wARaJLyP7rf1UrFRp1GtVEcTtbLySUaEN-2-1lGHRco1HHCBDvjQWVU6RbVR0u5LxVmF7tfXLBlfYp_Mo2MTMO36BZFw9OV-v_C6r4FUeNGV3UbKIpcvrrELeVleT8z1HlNKFynYaYYMzG3WCkkU86WJHj6eS0mxbrU7gBdqENapmsFhRrcemgqbWlwZRXN4jJQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
