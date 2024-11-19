@@ -45,6 +45,13 @@ Con estos comandos obtenemos los archivos: private.pem y public.pem que vamos a 
 
 ## Pasos
 
+Para correr los tests:
+./gradlew clean test --info
+
+Para levantar la aplicación:
+./gradlew clean bootRun --info
+
+
 Usando la collection de Postman:
 
 1. Crear usuario con el POST /persons

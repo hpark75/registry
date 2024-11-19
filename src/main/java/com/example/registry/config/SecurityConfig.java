@@ -29,7 +29,6 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-@EnableJpaAuditing
 public class SecurityConfig {
 
     private final RsaKeyProperties rsaKeys;
